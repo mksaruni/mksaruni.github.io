@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang=""en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitamboz | Online Electronics Shop</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="header2">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/account">Account</a></li>
+                </ul>
+            </nav>
+            <img src="{{ url_for( 'static', filename='images/cart2.png') }}" width ="30px"height="30px">
+            <img src="{{ url_for( 'static', filename='images/pic14.png') }}" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+<! -------------single product details-------------------------->
+<div class="small-container single-product">
+       <div class ="row">
+            <div class ="col-2">
+                <img src="{{ url_for( 'static', filename='images/nikon1.jpg') }}" width="100%" id="ProductImg">
+
+                <div class="small-img-row">
+                     <div class="small-img-col">
+                         <img src="{{ url_for( 'static', filename='images/nikon1.jpg') }}" width="100%" class="small-img">
+                     </div>
+                    <div class="small-img-col">
+                         <img src="{{ url_for( 'static', filename='images/nikon2.jpg') }}" width="100%" class="small-img">
+                     </div>
+                    <div class="small-img-col">
+                         <img src="{{ url_for( 'static', filename='images/nikon3.jpg') }}" width="100%" class="small-img">
+                     </div>
+                    <div class="small-img-col">
+                         <img src="{{ url_for( 'static', filename='images/nikon4.jpg') }}" width="100%" class="small-img">
+                     </div>
+                </div>
+            </div>
+            <div class ="col-2">
+                <p>Camera</p>
+                <h1>Nikon D7500</h1>
+                <h4>Ksh 134,900</h4>
+                <a href="/cart" class = "btn">Add to Cart</a>
+                <h3>Product details</h3>
+                <p>Nikon D7500 20.9MP DX-Format Digital SLR Camera + AF-S 18-140mm f/3.5-5.6G ED VR Lens Bundle with 64GB Memory Card, Camera Bag, Paintshop Pro 2018 and Accessories</p>
+            </div>
+       </div>
+ </div>
+
+<div class="small-container">
+       <div class ="row row-2">
+           <h2>More Products</h2>
+           <p>View</p>
+       </div>
+</div>
+
+<div class="small-container">
+       <div class ="row">
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/panasonic1.jpg') }}">
+                <h4><a href="/panasonic">Panasonic Camcoder</a></h4>
+                <p> Ksh 15000/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/canon2.jpg') }}">
+                <h4><a href="/canon">Canon Camera</a></h4>
+                <p> Ksh 46000/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/nikon2.jpg') }}">
+                <h4><a href="/nikon">Nikon D7500</a></h4>
+                <p> Ksh 134900/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/sonyalpha1.jpg') }}">
+                <h4><a href="/sonyalpha">Sony Alpha</a></h4>
+                <p> Ksh 64800/=</p>
+            </div>
+          </div>
+ </div>
+<!----------------------- footer -------------------------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download our Android and IOS apps</p>
+
+            </div>
+            <div class="footer-col-2">
+                <img src="images/mitambozlogo.png">
+                <p>Our only agenda is to guarantee high quality electronics that will help you live your best life</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blogs</li>
+                    <li>Privacy Policy</li>
+                    <li>Trade In</li>
+                </ul>
+            </div>
+             <div class="footer-col-4">
+                <h3>Connect With Us!</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Manenoz Ltd</p>
+    </div>
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+            if ( MenuItems.style.maxHeight == "0px")
+            { MenuItems.style.maxHeight = "200px";}
+            else
+            { MenuItems.style.maxHeight = "0px";}
+            }
+</script>
+<!---------js for product img -------->
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementByClassName("small-img");
+
+        SmallImg[0].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function()
+        {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function()
+        {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function()
+        {
+            ProductImg.src = SmallImg[3].src;
+        }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <body>
+    <h1>Add book</h1>
+    <form method="POST" action="/">
+      <input type="text" name="title">
+
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Books</h1>
+    <table>
+      {% for member in members %}
+        <tr>
+          <td>
+            {{member.name}}
+          </td>
+          <td>
+            <form method="POST" action="./update" style="display: inline">
+              <input type="hidden" value="{{member.password}}" name="oldpassword">
+              <input type="text" value="{{member.password}}" name="newpassword">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{member.password}}" name="password">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+        <td>
+            <form method="POST" action="./update" style="display: inline">
+              <input type="hidden" value="{{member.name}}" name="oldtitle">
+              <input type="text" value="{{member.name}}" name="newtitle">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{member.name}}" name="name">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang=""en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitamboz | Online Electronics Shop</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/products">Products</a></li>
+                </ul>
+            </nav>
+            <a href="/cart"><img src="{{ url_for( 'static', filename='images/cart2.png') }}"  width ="30px"height="30px"><span>0</span></a>
+
+            <img src="{{ url_for( 'static', filename='images/pic14.png') }}" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Quality Electronics You Can Trust!</h1>
+                <p>Are you tired of fake, low quality electronics every time you shop online?<br> Are you sick of losing goods because the online store lost your order?
+                <br> Look no further! Mitamboz is here to solve all your electronic needs.</p>
+                <a href ="" class="btn">SHOP NOW &#10174;</a>
+            </div>
+            <div class="col-2">
+                <img src="{{ url_for( 'static', filename='images/pic17.png') }}">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------- Great Discounts on select categories -------------------------->
+<div class="categories">
+    <div class="small-container">
+        <div class ="row">
+            <div class ="col-3">
+                <img src="{{ url_for( 'static', filename='images/asus1.jpg') }}">
+            </div>
+            <div class ="col-3">
+                <img src="{{ url_for( 'static', filename='images/macbook2.jpg') }}">
+            </div>
+            <div class ="col-3">
+                <img src="{{ url_for( 'static', filename='images/canon2.jpg') }}">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------- Great Discounts on select products -------------------------->
+<div class="small container">
+    <h2 class="title">Great Discounts On These Products! </h2>
+    <div class ="row">
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/canon1.jpg') }}">
+                <h4><a href="/canon">Canon Camera</a></h4>
+                <p> Ksh 46000/=</p>
+
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/redmi1.jpg') }}">
+                <h4><a href="/redmi">Redmi Note 10 Pro</a></h4>
+                <p> Ksh 24,999/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/panasonic1.jpg') }}">
+               <h4><a href="/panasonic">Panasonic Camcoder</a></h4>
+                <p> Ksh 15000/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/hp1.jpg') }}">
+                <h4><a href="/hp">HP Elitedesk 840</a></h4>
+                <p> Ksh 109000/=</p>
+            </div>
+        </div>
+    <h2 class="title">Latest Arrivals! </h2>
+    <div class ="row">
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/sonyalpha1.jpg') }}">
+               <h4><a href="/sonyalpha">Sony Alpha</a></h4>
+                <p> Ksh 64800/=</p>
+
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/samsung1.jpg') }}">
+                <h4><a href="/samsung">Samsung S20 Pro</a></h4>
+                <p> Ksh 85000/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/tcl1.jpg') }}">
+                <h4><a href="/tcl">TCL Mobile</a></h4>
+                <p> Ksh 15,000/=</p>
+            </div>
+            <div class ="col-4">
+                <img src="{{ url_for( 'static', filename='images/asus1.jpg') }}">
+                <h4><a href="/asus">Asus Legion</a></h4>
+                <p> Ksh 82000/=</p>
+            </div>
+        </div>
+</div>
+<!----------------------- Offer -------------------------->
+
+<div class="offer">
+    <div class="small container">
+        <div class="row">
+            <div class="col-2">
+                <img src="{{ url_for( 'static', filename='images/nikon1.jpg') }}" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Available only on Mitamboz!</p>
+                <h1>Nikon D7500 DSLR camera</h1>
+                <small>Bring your vision to life with photos and videos that shine with sharpness and clarity. Capture stunning photos and videos and share special memories with the Nikon Camera.</small>
+                <a href ="/nikon" class="btn">BUY NOW &#10174;</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------- Reviews -------------------------->
+
+<div class= "reviews">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+            <p>I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.</p>
+            <img src="{{ url_for( 'static', filename='images/pic2.jpg') }}">
+            <h3>Japheth Musyoka</h3>
+            </div>
+             <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+            <p>I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.</p>
+            <img src="{{ url_for( 'static', filename='images/pic2.jpg') }}">
+            <h3>Philip Ongweno</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+            <p>I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.</p>
+            <img src="{{ url_for( 'static', filename='images/pic2.jpg') }}">
+            <h3>Beth Njoki</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!----------------------- Sponsors -------------------------->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="{{ url_for( 'static', filename='images/asuslogo.png') }}">
+            </div>
+             <div class="col-5">
+                <img src="{{ url_for( 'static', filename='images/hplogo.png') }}">
+            </div>
+             <div class="col-5">
+                <img src="{{ url_for( 'static', filename='images/canonlogo.png') }}">
+            </div>
+             <div class="col-5">
+                <img src="{{ url_for( 'static', filename='images/redmilogo.png') }}">
+            </div>
+             <div class="col-5">
+                <img src="{{ url_for( 'static', filename='images/panasoniclogo.png') }}">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------- footer -------------------------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download our Android and IOS apps</p>
+                <div class="app-logo">
+                    <img src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}">
+                    <img src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}">
+                <p>Our only agenda is to guarantee high quality electronics that will help you live your best life</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blogs</li>
+                    <li>Privacy Policy</li>
+                    <li>Trade In</li>
+                </ul>
+            </div>
+             <div class="footer-col-4">
+                <h3>Connect With Us!</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Manenoz Ltd</p>
+    </div>
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+            if ( MenuItems.style.maxHeight == "0px")
+            { MenuItems.style.maxHeight = "200px";}
+            else
+            { MenuItems.style.maxHeight = "0px";}
+            }
+</script>
+
+</body>
+</html>
